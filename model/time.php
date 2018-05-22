@@ -47,7 +47,6 @@ function stop_time($start_id)
     $statement->bindValue(':start_id', $start_id);
     $statement->execute();
     $statement->closeCursor();
-    echo $start_id;
 }
 
 function toggle($initials, $part_number, $description, $start_id = null)
