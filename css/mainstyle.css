@@ -1,0 +1,16 @@
+.box1 {
+  padding: 25px;
+  margin: 20px;
+  max-width: 600px;
+  border-radius: 5px;
+  border: 2px solid black
+}
+
+
+
+/* REMOVE EXPORT BUTTON FROM MOBILE DEVICES */
+@media (pointer:none), (pointer:coarse) {
+      .no-mobile {
+        display: none;
+      }
+}
