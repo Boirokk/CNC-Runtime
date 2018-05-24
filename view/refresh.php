@@ -48,8 +48,9 @@
 
 <br>
 <form class="no-mobile" action="../" method="post">
+
     <input id="response" type="hidden" name="action" value="excel">
-    <input onclick="myFunction()" class="btn btn-lg btn-success btn-block" type="submit" name="export_excel"
+    <input onclick="myFunction()" class="btn btn-xs btn-success" type="submit" name="export_excel"
            value="Export to Excel">
 </form>
 <br>
@@ -67,16 +68,16 @@
 			}, 1000);
 		});
 
-    function myFunction() {
-        var txt = document.getElementById('response');
-        var r = confirm("This will erase the current data.\nDo you wish to proceed?\nThis cannot be undone!");
-        if (r == true) {
-            txt.value = "excel";
-        } else {
-            txt.value = "table";
-        }
-        document.getElementById("demo").innerHTML = txt;
-    }
+    // function myFunction() {
+    //     var txt = document.getElementById('response');
+    //     var r = confirm("This will erase the current data.\nDo you wish to proceed?\nThis cannot be undone!");
+    //     if (r == true) {
+    //         txt.value = "excel";
+    //     } else {
+    //         txt.value = "table";
+    //     }
+    //     document.getElementById("demo").innerHTML = txt;
+    // }
 	</script>
 
 

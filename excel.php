@@ -2,8 +2,8 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th scope="col">Day</th>
-        <th scope="col">Date</th>
+        <th scope="col">Start Time</th>
+        <th scope="col">Stop Time</th>
         <th scope="col">Operator</th>
         <th scope="col">Job #</th>
         <th scope="col">Description</th>
@@ -16,8 +16,8 @@
       <?php foreach ($entries as $entry): ?>
 
         <tr>
-        <td><?php echo date('D') ?></td>
-        <td><?php echo date('Y-m-d') ?></td>
+        <td><?php echo $entry['start_time']; ?></td>
+        <td><?php echo $entry['stop_time']; ?></td>
         <td><?php echo $entry['initials']; ?></td>
         <td><?php echo $entry['part_number']; ?></td>
         <td><?php echo $entry['description']; ?></td>
@@ -41,7 +41,7 @@
   <?php
     $tdate = date("Y-m-d");
     header("Content-Type: application/xls");
-    header("Content-Disposition: attachment; filename=cnc_daily_time_$tdate.xls");
-    delete_all_stop();
-    delete_all_start();
+    header("Content-Disposition: attachment; filename=cnc_daily_time_as_of_$tdate.xls");
+    // delete_all_stop();
+    // delete_all_start();
    ?>
