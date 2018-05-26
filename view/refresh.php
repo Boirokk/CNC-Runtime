@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css">
 
     <!-- Main Stylesheet CSS -->
     <link rel="stylesheet" href="css/mainstyle.css">
@@ -50,7 +50,7 @@
 <form class="no-mobile" action="../" method="post">
 
     <input id="response" type="hidden" name="action" value="excel">
-    <input onclick="myFunction()" class="btn btn-xs btn-success" type="submit" name="export_excel"
+    <input onclick="myFunction()" class="btn btn-xs btn-success btn-block" type="submit" name="export_excel"
            value="Export to Excel">
 </form>
 <br>

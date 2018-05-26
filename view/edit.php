@@ -1,5 +1,5 @@
 <?php include('header.php'); ?>
-<div class="card text-white bg-info mb-3" style="margin-top: 40px; max-width: 40rem;">
+<div class="card text-white bg-success mb-3" style="margin-top: 40px; max-width: 40rem;">
   <div class="card-header"><?php echo $title; ?></div>
   <div class="card-body">
     <div class="" align="left">
@@ -14,7 +14,7 @@
           <label class="col-form-label" for="inputDefault">Description</label>
           <input type="text" name="description" class="form-control" placeholder="model#, area, material, etc." id="inputDefault">
         </div>
-        <button type="submit" class="btn btn-success">Add</button>
+        <button type="submit" class="btn btn-primary">Add</button>
       </form>
       <br>
       <?php if (!empty($msg)): ?>
@@ -27,7 +27,7 @@
 
     </div><!-- close box1 -->
 
-    <div class="box1" align="left">
+    <div class="box1 bg-warning" align="left">
       <form class="" action="." method="post">
         <input type="hidden" name="action" value="delete">
         <div class="form-group">
@@ -43,7 +43,7 @@
       </form>
       <br>
       <?php if (!empty($msg_deleted)): ?>
-        <div class="alert alert-dismissible alert-warning">
+        <div class="alert alert-dismissible alert-danger">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
           <h4 class="alert-heading"><?php echo $msg_deleted; ?></h4>
         </div>

@@ -13,6 +13,7 @@ function get_row($id)
     return $time;
 }
 
+// Get the id for the last entry added
 function get_start_id()
 {
     $db = Database::getDb();
@@ -25,6 +26,7 @@ function get_start_id()
     return $start_id;
 }
 
+// Get the time after pushing the start button
 function start_time($initials, $part_number, $description)
 {
     $db = Database::getDB();

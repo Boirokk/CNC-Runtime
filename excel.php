@@ -31,7 +31,6 @@
             $datetime2 = new DateTime($time['start_time']);
             $interval = $datetime1->diff($datetime2);
             echo $interval->format('%H:%I:%S');
-
            ?>
         </td>
         </tr>
@@ -41,7 +40,7 @@
   <?php
     $tdate = date("Y-m-d");
     header("Content-Type: application/xls");
-    header("Content-Disposition: attachment; filename=cnc_daily_time_as_of_$tdate.xls");
+    header("Content-Disposition: attachment; filename=cnc_daily_time.xls");
     // delete_all_stop();
     // delete_all_start();
    ?>

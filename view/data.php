@@ -64,8 +64,22 @@ function get_row($id)
     return $time;
 }
 
+// Get the id for the last entry added
+function get_start_id()
+{
+    $db = Database::getDb();
+
+    $query = "SELECT start_id FROM start ORDER BY start_id DESC LIMIT 1";
+    $statement = $db->prepare($query);
+    $statement->execute();
+    $start_id = $statement->fetch();
+    $statement->closeCursor();
+    return $start_id;
+}
+
 
 $entries = get_start_entry();
+$start_id = get_start_id();
 ?>
 
 
@@ -105,8 +119,8 @@ $entries = get_start_entry();
                 $datetime1 = new DateTime($time['stop_time']);
                 $datetime2 = new DateTime($time['start_time']);
                 $interval = $datetime1->diff($datetime2);
-                if ($interval->format('%H:%I:%S') == '00:00:00') {
-                  echo "ACTIVE";
+                if (($interval->format('%H:%I:%S') == '00:00:00') && ($start_id['start_id'] == $id)) {
+                  echo "Active";
                 } else {
                   echo $interval->format('%H:%I:%S');
                 }
